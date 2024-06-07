@@ -8,7 +8,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
 	binary_tree_t *grand =  node->parent->parent;
 
-	if (node == NULL || grand == NULL)
+	if (node == NULL || grand == NULL || node->parent == NULL)
 		return (NULL);
 
 	if (node->n < grand->n)
